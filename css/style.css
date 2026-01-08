@@ -1,0 +1,65 @@
+/* Custom Stylesheet - Complements Bootstrap */
+:root {
+  --color-bg-primary: #FFD735;
+  --color-text-primary: #915B28;
+}
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-bg-primary);
+    color: var(-color-text-primary);
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.side-bar {
+    padding: 2rem 1.25rem;
+    text-align: center;
+}
+
+
+.gallery {
+
+    .gallery__thumbnail {
+        
+    }
+}
+
+/* Desktop layout */
+@media (min-width: 992px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .side-bar {
+        position: sticky;
+        top: 0;
+        min-height: calc(100vh - 4rem);
+        border-right: 1px solid #e5e7eb;
+        border-bottom: none;
+        padding: 2.5rem 1.5rem;
+        text-align: left;
+    }
+
+    .side-bar img {
+        max-width: 240px;
+        margin-top: 2rem;
+    }
+    
+    .main-content {
+        
+    }
+
+    .row + .row {
+        margin-top: 1.5rem;
+    }
+}
