@@ -3,84 +3,353 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio website showcasing my work and skills">
-    <title>My Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta name="description" content="UX/UI Designer Portfolio - Showcasing innovative design solutions">
+    <title>Andrias Taniwan UX/UI Designer based in Sydney, Australia</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 </head>
 <body>
 
+    <!-- Custom cursor -->
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
 
-    <main class="main-container">
-        <aside class="side-bar">
-            <div class="container">
-                <h1>
-                    Andrias Taniwan
-                </h1>
-                <p>UX/UI Designer</p>                
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">AT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#clients">Clients</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
-            <img src="images/andrias-illustration.png" alt="Andrias illustration working">
-        </aside>
+        </div>
+    </nav>
 
-        <section class="main-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <p class="short-biography">
-                            Hi, I'm a Sydney-based Design Lead who specialises in product UX/UI, design systems, accessibility, and front-end build bridging design and code.
-                        </p>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <header>
+                        <h1 class="hero-heading">Andrias Taniwan <span class="text-accent">UX/UI Designer</span></h1>
+                        <p class="hero-subtitle mb-4">Senior UX/UI Designer with 10+ years' experience building high-traffic web and SaaS products, bridging design and engineering to deliver scalable, high-performing digital experiences.</p>
+                        <a href="#projects" class="btn hero-cta magnetic">View My Work</a>
+                    </header>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-illustration">
+                        <img src="images/andrias-illustration.png" alt="Hero Illustration" class="img-fluid">
                     </div>
                 </div>
-                
-                <div class="row">
-                    <div class="container gallery">
-                        <div class="row">
-                            <div class="col">
-                                <a class="gallery__thumbnail" href="https://picsum.photos/1200/800?random=1">
-                                    <img src="https://picsum.photos/600/400?random=1" alt="Project placeholder image 1" class="img-fluid">
-                                </a>
+            </div>
+        </div>
+
+        <div class="floating-illustration floating-1" aria-hidden="true"><svg width="60" height="60" viewBox="0 0 60 60"><circle cx="30" cy="30" r="25" fill="#FFB84D" opacity="0.5"/></svg></div>
+        <div class="floating-illustration floating-2" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 40 40"><polygon points="20,5 35,35 5,35" fill="#FFD700" opacity="0.55"/></svg></div>
+        <div class="floating-illustration floating-3" aria-hidden="true"><svg width="50" height="50" viewBox="0 0 50 50"><rect x="10" y="10" width="30" height="30" rx="5" fill="#FFA500" opacity="0.45"/></svg></div>
+        <div class="floating-illustration floating-4" aria-hidden="true"><svg width="36" height="36" viewBox="0 0 36 36"><circle cx="18" cy="18" r="16" fill="#FFE135" opacity="0.6"/></svg></div>
+        <div class="floating-illustration floating-5" aria-hidden="true"><svg width="44" height="44" viewBox="0 0 44 44"><rect x="6" y="6" width="32" height="32" rx="12" fill="#FF8C00" opacity="0.4"/></svg></div>
+        <div class="floating-illustration floating-6" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 30 30"><polygon points="15,3 27,27 3,27" fill="#FFD700" opacity="0.65"/></svg></div>
+        <div class="floating-illustration floating-7" aria-hidden="true"><svg width="52" height="52" viewBox="0 0 52 52"><circle cx="26" cy="26" r="20" fill="#FFE5B4" opacity="0.7"/></svg></div>
+        <div class="floating-illustration floating-8" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 34 34"><rect x="4" y="4" width="26" height="26" rx="6" fill="#FFA500" opacity="0.5"/></svg></div>
+        <div class="floating-illustration floating-9" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 40 40"><polygon points="20,4 36,20 20,36 4,20" fill="#FFB84D" opacity="0.6"/></svg></div>
+        <div class="floating-illustration floating-10" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="12" fill="#FF8C00" opacity="0.45"/></svg></div>
+        <div class="floating-illustration floating-11" aria-hidden="true"><svg width="46" height="46" viewBox="0 0 46 46"><rect x="8" y="8" width="30" height="30" rx="15" fill="#FFD700" opacity="0.55"/></svg></div>
+        <div class="floating-illustration floating-12" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 32 32"><polygon points="16,2 30,12 24,30 8,30 2,12" fill="#FFE135" opacity="0.6"/></svg></div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section py-5">
+        <div class="container">
+            <header class="mb-5">
+                <p class="section-eyebrow">Portfolio</p>
+                <h2 class="fw-bold mb-2">Featured Projects</h2>
+                <p class="section-sub">Explore my latest design work</p>
+            </header>
+
+            <div class="row g-4">
+                <article class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <a href="https://www.figma.com/proto/LyBjcLlfwb7whW4OheY3or/Case-Study?page-id=0%3A1&node-id=24-2797&p=f&viewport=731%2C255%2C0.47&t=o29HUl09uVuGHzEk-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A2" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <div class="project-thumbnail">
+                                <div class="thumbnail-placeholder">
+                                    <img src="images/thumbnails/thumbnail-1.jpg" alt="Mozo Travel Insurance">
+                                </div>
+                                <div class="project-overlay">
+                                    <span class="view-project">View in Figma →</span>
+                                </div>
                             </div>
-                            <div class="col">
-                                <a class="gallery__thumbnail" href="https://picsum.photos/1200/800?random=2">
-                                    <img src="https://picsum.photos/600/400?random=2" alt="Project placeholder image 2" class="img-fluid">
-                                </a>
+                            <div class="project-info">
+                                <h3 class="project-title">Mozo Travel Insurance</h3>
+                                <p class="project-description">Travel insurance quote engine – UX/UI case study.</p>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <a class="gallery__thumbnail" href="https://picsum.photos/1200/800?random=1">
-                                    <img src="https://picsum.photos/600/400?random=1" alt="Project placeholder image 1" class="img-fluid">
-                                </a>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <a href="https://www.figma.com/proto/LyBjcLlfwb7whW4OheY3or/Case-Study?page-id=0%3A1&node-id=1-2&p=f&viewport=731%2C255%2C0.47&t=o29HUl09uVuGHzEk-1&scaling=min-zoom&content-scaling=fixed" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <div class="project-thumbnail">
+                                <div class="thumbnail-placeholder">
+                                    <img src="images/thumbnails/thumbnail-2.jpg" alt="Mozo Rate Alert">
+                                </div>
+                                <div class="project-overlay">
+                                    <span class="view-project">View in Figma →</span>
+                                </div>
                             </div>
-                            <div class="col">
-                                <a class="gallery__thumbnail" href="https://picsum.photos/1200/800?random=2">
-                                    <img src="https://picsum.photos/600/400?random=2" alt="Project placeholder image 2" class="img-fluid">
-                                </a>
+                            <div class="project-info">
+                                <h3 class="project-title">Mozo Rate Alert</h3>
+                                <p class="project-description">Rate alert feature – product design case study.</p>
                             </div>
-                        </div>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <a href="https://www.figma.com/proto/LyBjcLlfwb7whW4OheY3or/Case-Study?page-id=0%3A1&node-id=16-905&p=f&viewport=731%2C255%2C0.47&t=o29HUl09uVuGHzEk-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A2" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <div class="project-thumbnail">
+                                <div class="thumbnail-placeholder">
+                                    <img src="images/thumbnails/thumbnail-3.jpg" alt="JDM Concept">
+                                </div>
+                                <div class="project-overlay">
+                                    <span class="view-project">View in Figma →</span>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">JDM Concept</h3>
+                                <p class="project-description">Homepage redesign – UX strategy & UI case study.</p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <a href="https://www.figma.com/proto/N3e4a8BojbUUCwEWRc9Qcv/Mozo-Rebrand?node-id=1-2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A2" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <div class="project-thumbnail">
+                                <div class="thumbnail-placeholder">
+                                    <img src="images/thumbnails/thumbnail-4.jpg" alt="Mozo App Concept">
+                                </div>
+                                <div class="project-overlay">
+                                    <span class="view-project">View in Figma →</span>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Mozo App Concept</h3>
+                                <p class="project-description">Mobile app concept – end-to-end product design.</p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <a href="https://www.figma.com/proto/ZEYtnNh678oxYhRPIRPF0h/Career-CoPilot---2-columns?node-id=0%3A95&scaling=scale-down-width&page-id=0%3A1" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <div class="project-thumbnail">
+                                <div class="thumbnail-placeholder">
+                                    <img src="images/thumbnails/thumbnail-5.jpg" alt="Reejig for Woolworths">
+                                </div>
+                                <div class="project-overlay">
+                                    <span class="view-project">View in Figma →</span>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Reejig (for Woolworths)</h3>
+                                <p class="project-description">AI HR platform – enterprise UI design case study.</p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <a href="https://www.figma.com/proto/EsOLsEbWN0ZSucJ5EzE8ra/Portfolio?node-id=0%3A1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A7" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <div class="project-thumbnail">
+                                <div class="thumbnail-placeholder">
+                                    <img src="images/thumbnails/thumbnail-6.jpg" alt="WillyWeather iOS Redesign">
+                                </div>
+                                <div class="project-overlay">
+                                    <span class="view-project">View in Figma →</span>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">WillyWeather iOS Redesign</h3>
+                                <p class="project-description">Mobile app redesign – UX/UI case study.</p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients-section py-5">
+        <div class="container">
+            <header class="text-center mb-5">
+                <p class="section-eyebrow">Collaborations</p>
+                <h2 class="fw-bold mb-2">Trusted By</h2>
+                <p class="section-sub">Companies I've had the pleasure of working with</p>
+            </header>
+
+            <!-- Marquee track — duplicated for seamless loop -->
+            <div class="marquee-wrapper" aria-label="Client logos">
+                <div class="marquee-track">
+                    <div class="marquee-item"><div class="client-logo"><img src="images/clients/freelancer.svg" alt="Freelancer"></div></div>
+                    <div class="marquee-item"><div class="client-logo"><img src="images/clients/mozo.svg" alt="Mozo"></div></div>
+                    <div class="marquee-item"><div class="client-logo"><img src="images/clients/wwf.svg" alt="WWF"></div></div>
+                    <div class="marquee-item"><div class="client-logo"><img src="images/clients/reejig.png" alt="Reejig"></div></div>
+                    <div class="marquee-item"><div class="client-logo"><img src="images/clients/willyweather.png" alt="WillyWeather"></div></div>
+                    <div class="marquee-item"><div class="client-logo"><img src="images/clients/onlinesoft.png" alt="Onlinesoft"></div></div>
+                    <div class="marquee-item"><div class="client-logo"><img src="images/clients/marketview.svg" alt="Marketview"></div></div>
+                    <div class="marquee-item"><div class="client-logo"><img src="images/clients/Faber-Castell.svg" alt="Faber-Castell"></div></div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="marquee-item" aria-hidden="true"><div class="client-logo"><img src="images/clients/freelancer.svg" alt=""></div></div>
+                    <div class="marquee-item" aria-hidden="true"><div class="client-logo"><img src="images/clients/mozo.svg" alt=""></div></div>
+                    <div class="marquee-item" aria-hidden="true"><div class="client-logo"><img src="images/clients/wwf.svg" alt=""></div></div>
+                    <div class="marquee-item" aria-hidden="true"><div class="client-logo"><img src="images/clients/reejig.png" alt=""></div></div>
+                    <div class="marquee-item" aria-hidden="true"><div class="client-logo"><img src="images/clients/willyweather.png" alt=""></div></div>
+                    <div class="marquee-item" aria-hidden="true"><div class="client-logo"><img src="images/clients/onlinesoft.png" alt=""></div></div>
+                    <div class="marquee-item" aria-hidden="true"><div class="client-logo"><img src="images/clients/marketview.svg" alt=""></div></div>
+                    <div class="marquee-item" aria-hidden="true"><div class="client-logo"><img src="images/clients/Faber-Castell.svg" alt=""></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <header>
+                        <p class="section-eyebrow">Background</p>
+                        <h2 class="fw-bold mb-4">About Me</h2>
+                        <p class="about-lead">UI that performs — not just looks good.</p>
+                        <p class="about-bio">I'm a Senior UX/UI Designer with 10+ years' experience delivering high-traffic web and SaaS products across fintech and marketplaces. I combine strong interaction design and design systems thinking with hands-on front-end capability, bridging design and engineering to ship production-ready experiences that improve performance, usability, and conversion.</p>
+                    </header>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h3 class="skills-label">Skills &amp; Expertise</h3>
+                        <ul class="list-unstyled skills-list">
+                            <li>
+                                <i class="fa-solid fa-circle-check skill-icon" aria-hidden="true"></i>
+                                <span>User Experience Design</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check skill-icon" aria-hidden="true"></i>
+                                <span>User Interface Design</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check skill-icon" aria-hidden="true"></i>
+                                <span>Prototyping &amp; Wireframing</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check skill-icon" aria-hidden="true"></i>
+                                <span>Design Systems</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check skill-icon" aria-hidden="true"></i>
+                                <span>User Research</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check skill-icon" aria-hidden="true"></i>
+                                <span>Core Web Vitals &amp; SEO</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                        
-
-         
-                
-                
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <header class="text-center mb-5">
+                <p class="section-eyebrow">Say Hello</p>
+                <h2 class="fw-bold mb-2">Get In Touch</h2>
+                <p class="section-sub">Let's work together on your next project</p>
+            </header>
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xjgegnjn" method="POST">
+                        <div id="formMessage" class="alert d-none" role="alert"></div>
+                        <div class="mb-4">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit w-100 magnetic" id="submitBtn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p class="mb-0">&copy; 2026 Portfolio. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <p class="footer-copy">&copy; 2026 by Poporetto Andrias, client artworks are the respective owner's right, artworks are shown for portfolio purposes only.</p>
+                <div class="footer-social">
+                    <a href="mailto:hello@poporetto.com" class="social-icon" aria-label="Email hello@poporetto.com">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/poporetto/" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://dribbble.com/poporetto" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Dribbble profile">
+                        <i class="fa-brands fa-dribbble"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>
-
